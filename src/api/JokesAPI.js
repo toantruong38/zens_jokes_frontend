@@ -1,5 +1,7 @@
 export function getJokes() {
-  return fetch("http://localhost:3001/jokes")
+  return fetch(
+    "http://ec2-54-95-91-196.ap-northeast-1.compute.amazonaws.com/jokes"
+  )
     .then(async (res) => {
       if (res.status !== 200) {
         return [];
@@ -12,9 +14,12 @@ export function getJokes() {
 }
 
 export function voteJoke(id, vote) {
-  return fetch("http://localhost:3001/vote", {
-    body: JSON.stringify({ id, vote }),
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  });
+  return fetch(
+    "http://ec2-54-95-91-196.ap-northeast-1.compute.amazonaws.com/vote",
+    {
+      body: JSON.stringify({ id, vote }),
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    }
+  );
 }
