@@ -30,7 +30,14 @@ function App() {
     if (!joke) {
       return;
     }
-    voteJoke(joke.id, vote).finally(() => dismissJoke(joke));
+    voteJoke(joke.id, vote).finally(() => {
+      dismissJoke(joke);
+
+      const nextJoke = jokes[1];
+      if (nextJoke) {
+        dismissJoke(nextJoke, true);
+      }
+    });
   };
 
   useEffect(() => {
