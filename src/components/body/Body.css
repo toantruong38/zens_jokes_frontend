@@ -1,5 +1,5 @@
 .body-container {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 .intros-container {
   min-height: 200px;
@@ -9,24 +9,24 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
 }
 
 .main-intro,
 .sub-intro {
-  color: #fcfefd;
+  color: #ffffff;
   text-align: center;
 }
 
 .main-intro {
-  font-weight: 500;
+  font-weight: 600;
   word-spacing: 4px;
-  font-size: 25px;
+  font-size: 32px;
 }
 
 .sub-intro {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .joke-container {
@@ -35,14 +35,26 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0 25%;
   margin: 50px 0 0 0;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+@media (min-width: 1600px) {
+  .joke-container {
+    padding: 0 21%;
+  }
+}
+@media (max-width: 1599px) {
+  .joke-container {
+    padding: 0 15%;
+  }
 }
 
 .divider {
   background-color: rgba(221, 218, 218, 0.507);
   height: 1px;
-  margin: 50px 30%;
+  margin: 35px 30%;
 }
 
 .votes {
@@ -50,17 +62,17 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .positive-vote button,
 .negative-vote button {
   border: 0;
   color: #fcfefd;
-  width: 200px;
-  height: 40px;
+  width: 230px;
+  height: 49px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
 }
 .positive-vote button {
   background-color: #2c7edb;

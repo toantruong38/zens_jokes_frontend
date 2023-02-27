@@ -1,5 +1,5 @@
-import logo from "../../assets/google-logo.png";
-import userAvatar from "../../assets/user-avatar.png";
+import logo from "../../assets/hl-logo.png";
+import userAvatar from "../../assets/user-avatar-1.png";
 import "./Header.css";
 
 export default function Header() {
